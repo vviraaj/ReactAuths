@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+.login_Background {
+  background-image: linear-gradient(
+    to top,
+    #1e3c72 0%,
+    #1e3c72 1%,
+    #2a5298 100%
+  );
+  color: black;
+}
+
+.darkmode {
+  background-color: black;
+  color: white;
+}
+
+.btn_Signin_Background {
+  background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+}
+
+.reversed-progress-bar .Toastify__progress-bar {
+  animation: Toastify__progress-bar--inverse-progress 4s linear 0s 1 normal;
+}
+
+@keyframes Toastify__progress-bar--inverse-progress {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+
+.userlogo:hover {
+  transform: scale(1.5);
+  transition: transform 1s ease-in-out; 
+}
